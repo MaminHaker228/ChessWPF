@@ -1,0 +1,5 @@
+C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF.exe
+C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF.dll
+C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF.deps.json
+C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF.runtimeconfig.json
+C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF.pdb

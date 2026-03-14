@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="ChessWPF.Views.PromotionDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Превращение пешки"
+        Width="360" Height="160"
+        WindowStartupLocation="CenterOwner"
+        Background="#1A1A2E"
+        ResizeMode="NoResize"
+        WindowStyle="ToolWindow">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock Text="Выберите фигуру для превращения:"
+                   Foreground="#EAEAEA"
+                   FontSize="14"
+                   FontFamily="Segoe UI"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,12"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="BtnQueen"
+                    Content="&#x265B; Ферзь"
+                    Width="78" Height="54"
+                    Style="{StaticResource MenuButtonStyle}"
+                    FontSize="14"
+                    Click="BtnQueen_Click"
+                    Margin="3"/>
+            <Button x:Name="BtnRook"
+                    Content="&#x265C; Ладья"
+                    Width="78" Height="54"
+                    Style="{StaticResource MenuButtonStyle}"
+                    FontSize="14"
+                    Click="BtnRook_Click"
+                    Margin="3"/>
+            <Button x:Name="BtnBishop"
+                    Content="&#x265D; Слон"
+                    Width="78" Height="54"
+                    Style="{StaticResource MenuButtonStyle}"
+                    FontSize="14"
+                    Click="BtnBishop_Click"
+                    Margin="3"/>
+            <Button x:Name="BtnKnight"
+                    Content="&#x265E; Конь"
+                    Width="78" Height="54"
+                    Style="{StaticResource MenuButtonStyle}"
+                    FontSize="14"
+                    Click="BtnKnight_Click"
+                    Margin="3"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

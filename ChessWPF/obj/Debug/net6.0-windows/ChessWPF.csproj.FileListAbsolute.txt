@@ -1,0 +1,7 @@
+C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF\ChessWPF\obj\Debug\net6.0-windows\ App.baml
+C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF\ChessWPF\obj\Debug\net6.0-windows\Views\GameView.baml
+C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF\ChessWPF\obj\Debug\net6.0-windows\Views\PromotionDialog.baml
+C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF\ChessWPF\obj\Debug\net6.0-windows\ App.g.cs
+C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF\ChessWPF\obj\Debug\net6.0-windows\Views\GameView.g.cs
+C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF\ChessWPF\obj\Debug\net6.0-windows\Views\PromotionDialog.g.cs
+C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF\ChessWPF\obj\Debug\net6.0-windows\ChessWPF_MarkupCompile.cache
