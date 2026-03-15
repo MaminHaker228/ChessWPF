@@ -3,6 +3,118 @@
   "WorkspaceRootPath": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\puzzleview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\puzzleview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\models\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\models\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\ai\\aimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\ai\\aimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\analysisview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\analysisview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\mainmenuview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\mainmenuview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\mainmenuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\mainmenuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\victoryoverlay.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\victoryoverlay.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\victoryoverlay.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\victoryoverlay.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\historyview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\historyview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\analysisview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\analysisview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\historyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\historyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\puzzleview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\puzzleview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\models\\puzzledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\models\\puzzledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\models\\apptheme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\models\\apptheme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\models\\gamerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\models\\gamerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\gameview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\gameview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\profileview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\profileview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\profileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\profileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\models\\playerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\models\\playerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\gamelogic\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\gamelogic\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\gameview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\gameview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\timedialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\timedialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\timedialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\timedialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\difficultydialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\difficultydialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\difficultydialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\difficultydialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\pythonai\\chess_engine.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\pythonai\\chess_engine.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\lansetupdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\lansetupdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -20,14 +132,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\gameoverdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\gameoverdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\models\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\models\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\models\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,16 +178,8 @@
       "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\gamelogic\\movevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\gamelogic\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\gamelogic\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\network\\lanclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\network\\lanclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\ai\\aimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\ai\\aimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\network\\lanserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -96,10 +192,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\ui\\boardrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\ui\\boardrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\pythonai\\chess_engine.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\pythonai\\chess_engine.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\models\\piecetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -120,18 +212,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\lansetupdialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\lansetupdialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\gameview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\gameview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\views\\mainmenuview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\views\\mainmenuview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|c:\\users\\eliza\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\chesswpf\\chesswpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChessWPF\\ChessWPF.csproj|solutionrelative:chesswpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -150,88 +230,246 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LanSetupDialog.xaml",
-              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\LanSetupDialog.xaml",
-              "RelativeDocumentMoniker": "ChessWPF\\Views\\LanSetupDialog.xaml",
-              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\LanSetupDialog.xaml",
-              "RelativeToolTip": "ChessWPF\\Views\\LanSetupDialog.xaml",
+              "Title": "PuzzleView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\PuzzleView.xaml.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\PuzzleView.xaml.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\PuzzleView.xaml.cs",
+              "RelativeToolTip": "ChessWPF\\Views\\PuzzleView.xaml.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAIAwwH4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:59:11.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PuzzleData.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\PuzzleData.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Models\\PuzzleData.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\PuzzleData.cs",
+              "RelativeToolTip": "ChessWPF\\Models\\PuzzleData.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:58:16.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppTheme.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\AppTheme.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Models\\AppTheme.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\AppTheme.cs",
+              "RelativeToolTip": "ChessWPF\\Models\\AppTheme.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAmwGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:57:54.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ChessWPF\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAcwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T09:15:24.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainMenuView.xaml",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\MainMenuView.xaml",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\MainMenuView.xaml",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\MainMenuView.xaml",
+              "RelativeToolTip": "ChessWPF\\Views\\MainMenuView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-14T10:05:56.411Z",
+              "WhenOpened": "2026-03-15T14:31:29.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainMenuView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\MainMenuView.xaml.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\MainMenuView.xaml.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\MainMenuView.xaml.cs",
+              "RelativeToolTip": "ChessWPF\\Views\\MainMenuView.xaml.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAcwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T09:16:59.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HistoryView.xaml",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\HistoryView.xaml",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\HistoryView.xaml",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\HistoryView.xaml",
+              "RelativeToolTip": "ChessWPF\\Views\\HistoryView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T15:00:08.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Title": "AIManager.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\AI\\AIManager.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\AI\\AIManager.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\AI\\AIManager.cs",
+              "RelativeToolTip": "ChessWPF\\AI\\AIManager.cs",
+              "ViewState": "AgIAAE8BAAAAAAAAAAAAwGABAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T09:48:10.498Z"
+              "WhenOpened": "2026-03-14T09:24:18.11Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "ViewState": "AgIAACkAAAAAAAAAAAAiwEgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-14T09:47:45.285Z"
+              "Title": "AnalysisView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\AnalysisView.xaml.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\AnalysisView.xaml.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\AnalysisView.xaml.cs",
+              "RelativeToolTip": "ChessWPF\\Views\\AnalysisView.xaml.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAMwJIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:59:45.332Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Microsoft.WinFX.targets",
-              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.312\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.312\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
-              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.312\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.312\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
-              "ViewState": "AgIAAMEAAAAAAAAAAAAkwNIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-03-14T09:42:44.807Z"
+              "Title": "Board.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\Board.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Models\\Board.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\Board.cs",
+              "RelativeToolTip": "ChessWPF\\Models\\Board.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAcwGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T09:22:26.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GameOverDialog.xaml",
-              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameOverDialog.xaml",
-              "RelativeDocumentMoniker": "ChessWPF\\Views\\GameOverDialog.xaml",
-              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameOverDialog.xaml",
-              "RelativeToolTip": "ChessWPF\\Views\\GameOverDialog.xaml",
+              "DocumentIndex": 12,
+              "Title": "PuzzleView.xaml",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\PuzzleView.xaml",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\PuzzleView.xaml",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\PuzzleView.xaml",
+              "RelativeToolTip": "ChessWPF\\Views\\PuzzleView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-14T09:38:15.414Z"
+              "WhenOpened": "2026-03-15T14:58:46.762Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
+              "Title": "AnalysisView.xaml",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\AnalysisView.xaml",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\AnalysisView.xaml",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\AnalysisView.xaml",
+              "RelativeToolTip": "ChessWPF\\Views\\AnalysisView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T14:59:29.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HistoryView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\HistoryView.xaml.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\HistoryView.xaml.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\HistoryView.xaml.cs",
+              "RelativeToolTip": "ChessWPF\\Views\\HistoryView.xaml.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAcwIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:00:44.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VictoryOverlay.xaml",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\VictoryOverlay.xaml",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\VictoryOverlay.xaml",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\VictoryOverlay.xaml",
+              "RelativeToolTip": "ChessWPF\\Views\\VictoryOverlay.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T15:01:17.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VictoryOverlay.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\VictoryOverlay.xaml.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\VictoryOverlay.xaml.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\VictoryOverlay.xaml.cs",
+              "RelativeToolTip": "ChessWPF\\Views\\VictoryOverlay.xaml.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAcwGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T15:01:31.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GameRecord.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\GameRecord.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Models\\GameRecord.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\GameRecord.cs",
+              "RelativeToolTip": "ChessWPF\\Models\\GameRecord.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAcwE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:57:32.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProfileView.xaml",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\ProfileView.xaml",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\ProfileView.xaml",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\ProfileView.xaml",
+              "RelativeToolTip": "ChessWPF\\Views\\ProfileView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T14:29:51.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PlayerProfile.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\PlayerProfile.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Models\\PlayerProfile.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\PlayerProfile.cs",
+              "RelativeToolTip": "ChessWPF\\Models\\PlayerProfile.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAmwIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:29:28.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "ChessWPF\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\MainWindow.xaml",
               "RelativeToolTip": "ChessWPF\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-14T09:37:53.034Z"
+              "WhenOpened": "2026-03-14T09:37:53.034Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Board.cs",
-              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\Board.cs",
-              "RelativeDocumentMoniker": "ChessWPF\\Models\\Board.cs",
-              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\Board.cs",
-              "RelativeToolTip": "ChessWPF\\Models\\Board.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAYwIYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T09:22:26.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 33,
               "Title": "Move.cs",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\Move.cs",
               "RelativeDocumentMoniker": "ChessWPF\\Models\\Move.cs",
@@ -243,19 +481,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Piece.cs",
-              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\Piece.cs",
-              "RelativeDocumentMoniker": "ChessWPF\\Models\\Piece.cs",
-              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\Piece.cs",
-              "RelativeToolTip": "ChessWPF\\Models\\Piece.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAYwCMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "GameView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameView.xaml.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\GameView.xaml.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameView.xaml.cs",
+              "RelativeToolTip": "ChessWPF\\Views\\GameView.xaml.cs",
+              "ViewState": "AgIAAFwCAAAAAAAAAAAqwHcCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T09:21:55.271Z"
+              "WhenOpened": "2026-03-14T09:17:21.296Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 35,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "ChessWPF\\MainWindow.xaml",
@@ -267,7 +506,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\GameLogic\\GameManager.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\GameLogic\\GameManager.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\GameLogic\\GameManager.cs",
+              "RelativeToolTip": "ChessWPF\\GameLogic\\GameManager.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAMwGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T09:23:28.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProfileView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\ProfileView.xaml.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\ProfileView.xaml.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\ProfileView.xaml.cs",
+              "RelativeToolTip": "ChessWPF\\Views\\ProfileView.xaml.cs",
+              "ViewState": "AgIAAC4BAAAAAAAAAAAcwEsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:30:27.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "GameOverDialog.xaml",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameOverDialog.xaml",
               "RelativeDocumentMoniker": "ChessWPF\\Views\\GameOverDialog.xaml",
@@ -279,7 +544,153 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 34,
+              "Title": "Piece.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\Piece.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Models\\Piece.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\Piece.cs",
+              "RelativeToolTip": "ChessWPF\\Models\\Piece.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T09:21:55.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TimeDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\TimeDialog.xaml",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\TimeDialog.xaml",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\TimeDialog.xaml",
+              "RelativeToolTip": "ChessWPF\\Views\\TimeDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T14:16:55.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TimeDialog.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\TimeDialog.xaml.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\TimeDialog.xaml.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\TimeDialog.xaml.cs",
+              "RelativeToolTip": "ChessWPF\\Views\\TimeDialog.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:17:19.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GameView.xaml",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameView.xaml",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\GameView.xaml",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameView.xaml",
+              "RelativeToolTip": "ChessWPF\\Views\\GameView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T14:20:37.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DifficultyDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\DifficultyDialog.xaml",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\DifficultyDialog.xaml",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\DifficultyDialog.xaml",
+              "RelativeToolTip": "ChessWPF\\Views\\DifficultyDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T14:08:28.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DifficultyDialog.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\DifficultyDialog.xaml.cs",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\DifficultyDialog.xaml.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\DifficultyDialog.xaml.cs",
+              "RelativeToolTip": "ChessWPF\\Views\\DifficultyDialog.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:09:14.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "LanSetupDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\LanSetupDialog.xaml",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\LanSetupDialog.xaml",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\LanSetupDialog.xaml",
+              "RelativeToolTip": "ChessWPF\\Views\\LanSetupDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-14T10:05:56.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "chess_engine.py",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\PythonAI\\chess_engine.py",
+              "RelativeDocumentMoniker": "ChessWPF\\PythonAI\\chess_engine.py",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\PythonAI\\chess_engine.py",
+              "RelativeToolTip": "ChessWPF\\PythonAI\\chess_engine.py",
+              "ViewState": "AgIAAGABAAAAAAAAAAAQwLABAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-14T09:26:02.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "GameOverDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameOverDialog.xaml",
+              "RelativeDocumentMoniker": "ChessWPF\\Views\\GameOverDialog.xaml",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameOverDialog.xaml",
+              "RelativeToolTip": "ChessWPF\\Views\\GameOverDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-14T09:38:15.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-14T09:47:45.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Microsoft.WinFX.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.312\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.312\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.312\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.312\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAkwNIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-03-14T09:42:44.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T09:48:10.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "ChessWPF.csproj",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\ChessWPF.csproj",
               "RelativeDocumentMoniker": "ChessWPF\\ChessWPF.csproj",
@@ -291,7 +702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 38,
               "Title": "MainMenuView.xaml",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\MainMenuView.xaml",
               "RelativeDocumentMoniker": "ChessWPF\\Views\\MainMenuView.xaml",
@@ -299,11 +710,12 @@
               "RelativeToolTip": "ChessWPF\\Views\\MainMenuView.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-14T09:16:50.857Z"
+              "WhenOpened": "2026-03-14T09:16:50.857Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 39,
               "Title": "LanSetupDialog.xaml",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\LanSetupDialog.xaml",
               "RelativeDocumentMoniker": "ChessWPF\\Views\\LanSetupDialog.xaml",
@@ -315,7 +727,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 40,
               "Title": "PromotionDialog.xaml",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\PromotionDialog.xaml",
               "RelativeDocumentMoniker": "ChessWPF\\Views\\PromotionDialog.xaml",
@@ -327,7 +739,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 41,
               "Title": "GameView.xaml",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameView.xaml",
               "RelativeDocumentMoniker": "ChessWPF\\Views\\GameView.xaml",
@@ -335,11 +747,12 @@
               "RelativeToolTip": "ChessWPF\\Views\\GameView.xaml",
               "ViewState": "AgIAAG0AAAAAAAAAAAAowHwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-14T09:17:07.814Z"
+              "WhenOpened": "2026-03-14T09:17:07.814Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 42,
               "Title": "MoveGenerator.cs",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\GameLogic\\MoveGenerator.cs",
               "RelativeDocumentMoniker": "ChessWPF\\GameLogic\\MoveGenerator.cs",
@@ -351,7 +764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 43,
               "Title": "MoveValidator.cs",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\GameLogic\\MoveValidator.cs",
               "RelativeDocumentMoniker": "ChessWPF\\GameLogic\\MoveValidator.cs",
@@ -363,19 +776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\GameLogic\\GameManager.cs",
-              "RelativeDocumentMoniker": "ChessWPF\\GameLogic\\GameManager.cs",
-              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\GameLogic\\GameManager.cs",
-              "RelativeToolTip": "ChessWPF\\GameLogic\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T09:23:28.434Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 44,
               "Title": "LANClient.cs",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Network\\LANClient.cs",
               "RelativeDocumentMoniker": "ChessWPF\\Network\\LANClient.cs",
@@ -387,19 +788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AIManager.cs",
-              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\AI\\AIManager.cs",
-              "RelativeDocumentMoniker": "ChessWPF\\AI\\AIManager.cs",
-              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\AI\\AIManager.cs",
-              "RelativeToolTip": "ChessWPF\\AI\\AIManager.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAYwL0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T09:24:18.11Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 45,
               "Title": "LANServer.cs",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Network\\LANServer.cs",
               "RelativeDocumentMoniker": "ChessWPF\\Network\\LANServer.cs",
@@ -411,7 +800,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 46,
               "Title": "PieceImages.cs",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\UI\\PieceImages.cs",
               "RelativeDocumentMoniker": "ChessWPF\\UI\\PieceImages.cs",
@@ -423,7 +812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 47,
               "Title": "BoardRenderer.cs",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\UI\\BoardRenderer.cs",
               "RelativeDocumentMoniker": "ChessWPF\\UI\\BoardRenderer.cs",
@@ -435,19 +824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "chess_engine.py",
-              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\PythonAI\\chess_engine.py",
-              "RelativeDocumentMoniker": "ChessWPF\\PythonAI\\chess_engine.py",
-              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\PythonAI\\chess_engine.py",
-              "RelativeToolTip": "ChessWPF\\PythonAI\\chess_engine.py",
-              "ViewState": "AgIAAKgBAAAAAAAAAAAQwLABAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-03-14T09:26:02.839Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 48,
               "Title": "PieceType.cs",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\PieceType.cs",
               "RelativeDocumentMoniker": "ChessWPF\\Models\\PieceType.cs",
@@ -459,7 +836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 49,
               "Title": "PieceColor.cs",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Models\\PieceColor.cs",
               "RelativeDocumentMoniker": "ChessWPF\\Models\\PieceColor.cs",
@@ -471,7 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 50,
               "Title": "GameOverDialog.xaml.cs",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameOverDialog.xaml.cs",
               "RelativeDocumentMoniker": "ChessWPF\\Views\\GameOverDialog.xaml.cs",
@@ -483,7 +860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 51,
               "Title": "PromotionDialog.xaml.cs",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\PromotionDialog.xaml.cs",
               "RelativeDocumentMoniker": "ChessWPF\\Views\\PromotionDialog.xaml.cs",
@@ -495,7 +872,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 52,
               "Title": "LanSetupDialog.xaml.cs",
               "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\LanSetupDialog.xaml.cs",
               "RelativeDocumentMoniker": "ChessWPF\\Views\\LanSetupDialog.xaml.cs",
@@ -504,42 +881,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-14T09:19:34.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "GameView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameView.xaml.cs",
-              "RelativeDocumentMoniker": "ChessWPF\\Views\\GameView.xaml.cs",
-              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\GameView.xaml.cs",
-              "RelativeToolTip": "ChessWPF\\Views\\GameView.xaml.cs",
-              "ViewState": "AgIAAMIBAAAAAAAAAAAYwN8BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T09:17:21.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "MainMenuView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\MainMenuView.xaml.cs",
-              "RelativeDocumentMoniker": "ChessWPF\\Views\\MainMenuView.xaml.cs",
-              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\Views\\MainMenuView.xaml.cs",
-              "RelativeToolTip": "ChessWPF\\Views\\MainMenuView.xaml.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAYwCQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T09:16:59.73Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ChessWPF\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\eliza\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ChessWPF\\ChessWPF\\MainWindow.xaml.cs",
-              "RelativeToolTip": "ChessWPF\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAYwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T09:15:24.579Z"
             }
           ]
         }

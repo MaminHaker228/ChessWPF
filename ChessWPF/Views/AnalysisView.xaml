@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page x:Class="ChessWPF.Views.AnalysisView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Background="#1A1A2E">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="280"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Доска -->
+        <Grid Grid.Column="0" HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"
+                       FontSize="22" FontWeight="Bold"
+                       Foreground="#EAEAEA" FontFamily="Segoe UI"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,12">
+                <TextBlock.Text>Анализ партии</TextBlock.Text>
+            </TextBlock>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="24"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <ItemsControl x:Name="RankLabels"
+                              Grid.Column="0" Grid.Row="0"/>
+                <Canvas x:Name="BoardCanvas"
+                        Grid.Column="1" Grid.Row="0"
+                        Width="480" Height="480"/>
+                <ItemsControl x:Name="FileLabels"
+                              Grid.Column="1" Grid.Row="1"
+                              Margin="0,2,0,0"/>
+            </Grid>
+
+            <!-- Управление -->
+            <StackPanel Grid.Row="2" Orientation="Horizontal"
+                        HorizontalAlignment="Center" Margin="0,12,0,0">
+                <Button x:Name="BtnFirst" Click="BtnFirst_Click"
+                        Content="⏮" Height="36" Width="50" Margin="4,0"
+                        FontSize="16" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="bd" Background="#2A2A4A"
+                                    CornerRadius="6">
+                                <ContentPresenter HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="bd" Property="Background" Value="#3A3A6A"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="BtnPrev" Click="BtnPrev_Click"
+                        Content="◀" Height="36" Width="50" Margin="4,0"
+                        FontSize="16" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="bd" Background="#2A2A4A" CornerRadius="6">
+                                <ContentPresenter HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="bd" Property="Background" Value="#3A3A6A"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock x:Name="TxtMoveNum"
+                           FontSize="16" Foreground="#EAEAEA"
+                           FontFamily="Segoe UI" VerticalAlignment="Center"
+                           Margin="12,0" MinWidth="80" TextAlignment="Center"/>
+                <Button x:Name="BtnNext" Click="BtnNext_Click"
+                        Content="▶" Height="36" Width="50" Margin="4,0"
+                        FontSize="16" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="bd" Background="#2A2A4A" CornerRadius="6">
+                                <ContentPresenter HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="bd" Property="Background" Value="#3A3A6A"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="BtnLast" Click="BtnLast_Click"
+                        Content="⏭" Height="36" Width="50" Margin="4,0"
+                        FontSize="16" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="bd" Background="#2A2A4A" CornerRadius="6">
+                                <ContentPresenter HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="bd" Property="Background" Value="#3A3A6A"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <!-- Правая панель -->
+        <StackPanel Grid.Column="1" Margin="8,16,16,16">
+
+            <!-- Оценка позиции -->
+            <Border Background="#16213E" CornerRadius="8"
+                    Padding="12" Margin="0,0,0,8">
+                <StackPanel>
+                    <TextBlock Foreground="#A0A0B0" FontSize="11"
+                               FontFamily="Segoe UI" Margin="0,0,0,4">
+                        <TextBlock.Text>Оценка позиции</TextBlock.Text>
+                    </TextBlock>
+                    <TextBlock x:Name="TxtScore"
+                               FontSize="24" FontWeight="Bold"
+                               Foreground="#EAEAEA" FontFamily="Consolas"/>
+                    <!-- Бар оценки -->
+                    <Grid Height="12" Margin="0,6,0,0">
+                        <Border Background="#333344" CornerRadius="6"/>
+                        <Border x:Name="ScoreBar" CornerRadius="6"
+                                HorizontalAlignment="Left" Width="130"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- Качество хода -->
+            <Border Background="#16213E" CornerRadius="8"
+                    Padding="12" Margin="0,0,0,8">
+                <StackPanel>
+                    <TextBlock Foreground="#A0A0B0" FontSize="11"
+                               FontFamily="Segoe UI" Margin="0,0,0,4">
+                        <TextBlock.Text>Качество хода</TextBlock.Text>
+                    </TextBlock>
+                    <TextBlock x:Name="TxtMoveQuality"
+                               FontSize="18" FontWeight="Bold"
+                               FontFamily="Segoe UI"/>
+                    <TextBlock x:Name="TxtBestMove"
+                               FontSize="12" Foreground="#A0A0B0"
+                               FontFamily="Segoe UI" Margin="0,4,0,0"
+                               TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Легенда -->
+            <Border Background="#16213E" CornerRadius="8"
+                    Padding="12" Margin="0,0,0,8">
+                <StackPanel>
+                    <TextBlock Foreground="#A0A0B0" FontSize="11"
+                               FontFamily="Segoe UI" Margin="0,0,0,8">
+                        <TextBlock.Text>Обозначения</TextBlock.Text>
+                    </TextBlock>
+                    <StackPanel Orientation="Horizontal" Margin="0,2">
+                        <TextBlock Text="!!" Foreground="#27AE60"
+                                   FontWeight="Bold" Width="28" FontSize="14"/>
+                        <TextBlock Text="Отличный ход" Foreground="#EAEAEA"
+                                   FontSize="12" FontFamily="Segoe UI"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,2">
+                        <TextBlock Text="!" Foreground="#2ECC71"
+                                   FontWeight="Bold" Width="28" FontSize="14"/>
+                        <TextBlock Text="Хороший ход" Foreground="#EAEAEA"
+                                   FontSize="12" FontFamily="Segoe UI"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,2">
+                        <TextBlock Text="?!" Foreground="#F39C12"
+                                   FontWeight="Bold" Width="28" FontSize="14"/>
+                        <TextBlock Text="Неточность" Foreground="#EAEAEA"
+                                   FontSize="12" FontFamily="Segoe UI"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,2">
+                        <TextBlock Text="?" Foreground="#E67E22"
+                                   FontWeight="Bold" Width="28" FontSize="14"/>
+                        <TextBlock Text="Ошибка" Foreground="#EAEAEA"
+                                   FontSize="12" FontFamily="Segoe UI"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,2">
+                        <TextBlock Text="??" Foreground="#E94560"
+                                   FontWeight="Bold" Width="28" FontSize="14"/>
+                        <TextBlock Text="Зевок" Foreground="#EAEAEA"
+                                   FontSize="12" FontFamily="Segoe UI"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- История с подсветкой -->
+            <Border Background="#16213E" CornerRadius="8"
+                    Padding="10" Margin="0,0,0,8" Height="200">
+                <ScrollViewer x:Name="HistoryScroll"
+                              VerticalScrollBarVisibility="Auto">
+                    <ItemsControl x:Name="MoveList"/>
+                </ScrollViewer>
+            </Border>
+
+            <Button Click="BtnBack_Click" Height="42" Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="bd" Background="#E94560" CornerRadius="8">
+                            <TextBlock FontSize="13" FontWeight="Bold"
+                                       Foreground="White" FontFamily="Segoe UI"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center">
+                                <TextBlock.Text>← Главное меню</TextBlock.Text>
+                            </TextBlock>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#C73652"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

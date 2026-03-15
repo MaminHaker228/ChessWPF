@@ -6,6 +6,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using ChessWPF.GameLogic;
 using ChessWPF.Models;
 using ChessWPF.AI;
@@ -16,36 +17,47 @@ namespace ChessWPF.Views
 {
     public partial class GameView : Page
     {
-        // ── layout constants ──────────────────────────────────────────────
+        // ── константы ─────────────────────────────────────────────────────
         private const double BoardSize = 560.0;
         private const double CellSize = BoardSize / 8.0;
 
-        // ── core state ────────────────────────────────────────────────────
+        // ── состояние игры ────────────────────────────────────────────────
         private GameManager _game;
         private GameMode _mode;
         private string _networkAddress;
+        private int _aiDepth;
         private bool _isAnimating;
 
-        // selected square
         private int _selRow = -1, _selCol = -1;
         private List<Move> _legalMovesForSelected = new();
 
-        // WPF visuals per square
         private readonly Rectangle[,] _tiles = new Rectangle[8, 8];
         private readonly TextBlock[,] _pieceText = new TextBlock[8, 8];
 
-        // network
+        // ── сеть ──────────────────────────────────────────────────────────
         private LANServer _server;
         private LANClient _client;
-        private bool _isMyTurn = true;   // for LAN
-        private PieceColor _myColor = PieceColor.White;
+        private bool _isMyTurn = true;
 
-        // ── constructor ───────────────────────────────────────────────────
-        public GameView(GameMode mode, string networkAddress = null)
+        // ── таймер ────────────────────────────────────────────────────────
+        private int _timerSeconds;
+        private int _whiteSecondsLeft;
+        private int _blackSecondsLeft;
+        private DispatcherTimer _timer;
+        private bool _timerEnabled => _timerSeconds > 0;
+
+        // ── конструктор ───────────────────────────────────────────────────
+        public GameView(GameMode mode, string networkAddress = null,
+                        int aiDepth = 3, int timerSeconds = 0)
         {
             InitializeComponent();
+
             _mode = mode;
             _networkAddress = networkAddress;
+            _aiDepth = aiDepth;
+            _timerSeconds = timerSeconds;
+            _whiteSecondsLeft = timerSeconds;
+            _blackSecondsLeft = timerSeconds;
 
             _game = new GameManager();
             _game.OnGameOver += HandleGameOver;
@@ -53,12 +65,16 @@ namespace ChessWPF.Views
 
             BuildBoardVisuals();
             SetupBoardLabels();
+            SetupTimer();
             Render();
 
             switch (mode)
             {
                 case GameMode.VsAI:
-                    TxtNetInfo.Text = "Режим: Игра против ИИ";
+                    string diff = aiDepth == 1 ? "Лёгкий"
+                                : aiDepth == 3 ? "Средний"
+                                               : "Сложный";
+                    TxtNetInfo.Text = $"Режим: Против ИИ  |  {diff}";
                     _isMyTurn = true;
                     break;
                 case GameMode.LanHost:
@@ -70,7 +86,7 @@ namespace ChessWPF.Views
             }
         }
 
-        // ── board construction ────────────────────────────────────────────
+        // ── построение доски ──────────────────────────────────────────────
         private void BuildBoardVisuals()
         {
             BoardCanvas.Children.Clear();
@@ -107,17 +123,22 @@ namespace ChessWPF.Views
             }
         }
 
+        // ── ОБНОВЛЁННЫЙ GetTileColor — читает скин из профиля ─────────────
         private SolidColorBrush GetTileColor(int row, int col)
         {
             bool light = (row + col) % 2 == 0;
+            var colors = PlayerProfile.Instance.GetBoardColors();
+
+            var lightColor = (Color)ColorConverter.ConvertFromString(colors.Light);
+            var darkColor = (Color)ColorConverter.ConvertFromString(colors.Dark);
+
             return light
-                ? new SolidColorBrush(Color.FromRgb(238, 216, 181))
-                : new SolidColorBrush(Color.FromRgb(181, 136, 99));
+                ? new SolidColorBrush(lightColor)
+                : new SolidColorBrush(darkColor);
         }
 
         private void SetupBoardLabels()
         {
-            // file labels (a-h) above board
             var filePanel = new StackPanel { Orientation = Orientation.Horizontal };
             string[] files = { "a", "b", "c", "d", "e", "f", "g", "h" };
             foreach (var f in files)
@@ -135,7 +156,6 @@ namespace ChessWPF.Views
             FileLabels.Items.Clear();
             FileLabels.Items.Add(filePanel);
 
-            // rank labels (8-1)
             RankLabels.Items.Clear();
             for (int r = 0; r < 8; r++)
             {
@@ -154,26 +174,94 @@ namespace ChessWPF.Views
             }
         }
 
-        // ── rendering ─────────────────────────────────────────────────────
+        // ── таймер ────────────────────────────────────────────────────────
+        private void SetupTimer()
+        {
+            UpdateTimerDisplay();
+            if (!_timerEnabled) return;
+
+            _timer = new DispatcherTimer();
+            _timer.Interval = TimeSpan.FromSeconds(1);
+            _timer.Tick += Timer_Tick;
+            _timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if (_game.IsGameOver || _isAnimating) return;
+
+            if (_game.CurrentTurn == PieceColor.White)
+            {
+                _whiteSecondsLeft--;
+                if (_whiteSecondsLeft <= 0)
+                {
+                    _whiteSecondsLeft = 0;
+                    _timer.Stop();
+                    UpdateTimerDisplay();
+                    HandleGameOver("Время вышло! Победа — Чёрные");
+                    return;
+                }
+            }
+            else
+            {
+                _blackSecondsLeft--;
+                if (_blackSecondsLeft <= 0)
+                {
+                    _blackSecondsLeft = 0;
+                    _timer.Stop();
+                    UpdateTimerDisplay();
+                    HandleGameOver("Время вышло! Победа — Белые");
+                    return;
+                }
+            }
+
+            UpdateTimerDisplay();
+        }
+
+        private void UpdateTimerDisplay()
+        {
+            if (!_timerEnabled)
+            {
+                TxtTimerWhite.Text = "";
+                TxtTimerBlack.Text = "";
+                return;
+            }
+
+            TxtTimerWhite.Text = FormatTime(_whiteSecondsLeft);
+            TxtTimerBlack.Text = FormatTime(_blackSecondsLeft);
+
+            TxtTimerWhite.Foreground = _whiteSecondsLeft < 30
+                ? new SolidColorBrush(Color.FromRgb(233, 69, 96))
+                : new SolidColorBrush(Color.FromRgb(234, 234, 234));
+
+            TxtTimerBlack.Foreground = _blackSecondsLeft < 30
+                ? new SolidColorBrush(Color.FromRgb(233, 69, 96))
+                : new SolidColorBrush(Color.FromRgb(234, 234, 234));
+        }
+
+        private string FormatTime(int seconds)
+        {
+            int m = seconds / 60;
+            int s = seconds % 60;
+            return $"{m:D2}:{s:D2}";
+        }
+
+        // ── рендер ────────────────────────────────────────────────────────
         private void Render()
         {
-            // reset tile colors
             for (int r = 0; r < 8; r++)
                 for (int c = 0; c < 8; c++)
                     _tiles[r, c].Fill = GetTileColor(r, c);
 
-            // highlight selected
             if (_selRow >= 0)
             {
                 _tiles[_selRow, _selCol].Fill =
                     new SolidColorBrush(Color.FromArgb(200, 100, 200, 100));
-
                 foreach (var mv in _legalMovesForSelected)
                     _tiles[mv.ToRow, mv.ToCol].Fill =
                         new SolidColorBrush(Color.FromArgb(180, 60, 170, 230));
             }
 
-            // last move highlight
             if (_game.LastMove != null)
             {
                 var lm = _game.LastMove;
@@ -183,45 +271,41 @@ namespace ChessWPF.Views
                     new SolidColorBrush(Color.FromArgb(150, 255, 220, 60));
             }
 
-            // draw pieces
             for (int r = 0; r < 8; r++)
             {
                 for (int c = 0; c < 8; c++)
                 {
                     var piece = _game.Board.GetPiece(r, c);
-                    _pieceText[r, c].Text = piece != null ? PieceImages.GetUnicode(piece) : "";
-                    _pieceText[r, c].Foreground = piece != null && piece.Color == PieceColor.White
-                        ? Brushes.White
-                        : Brushes.Black;
-                    // drop shadow for white pieces so they show on light squares
-                    if (piece != null && piece.Color == PieceColor.White)
-                    {
-                        _pieceText[r, c].Effect = new System.Windows.Media.Effects.DropShadowEffect
-                        {
-                            Color = Colors.Black,
-                            ShadowDepth = 1,
-                            BlurRadius = 3
-                        };
-                    }
-                    else
-                    {
-                        _pieceText[r, c].Effect = null;
-                    }
+                    _pieceText[r, c].Text = piece != null
+                        ? PieceImages.GetUnicode(piece) : "";
+                    _pieceText[r, c].Foreground = piece != null &&
+                        piece.Color == PieceColor.White
+                        ? Brushes.White : Brushes.Black;
+
+                    _pieceText[r, c].Effect = piece != null &&
+                        piece.Color == PieceColor.White
+                        ? new System.Windows.Media.Effects.DropShadowEffect
+                        { Color = Colors.Black, ShadowDepth = 1, BlurRadius = 3 }
+                        : null;
                 }
             }
 
-            // update side panel
             UpdateSidePanel();
+            UpdateTimerDisplay();
         }
 
         private void UpdateSidePanel()
         {
-            TxtStatus.Text = _game.IsGameOver ? GetGameOverText()
-                           : _game.CurrentTurn == PieceColor.White ? "Ваш ход (Белые)"
-                                                                    : "Ход соперника (Чёрные)";
-
-            if (_game.IsCheck && !_game.IsGameOver)
+            if (_game.IsGameOver)
+                TxtStatus.Text = GetGameOverText();
+            else if (_game.IsCheck)
                 TxtStatus.Text = "⚠ ШАХ!";
+            else
+                TxtStatus.Text = _game.CurrentTurn == PieceColor.White
+                    ? "Ваш ход (Белые)"
+                    : _mode == GameMode.VsAI
+                        ? "ИИ думает..."
+                        : "Ход соперника (Чёрные)";
 
             TxtCapturedBlack.Text = PieceImages.CapturedString(_game.CapturedByWhite);
             TxtCapturedWhite.Text = PieceImages.CapturedString(_game.CapturedByBlack);
@@ -232,19 +316,22 @@ namespace ChessWPF.Views
         {
             if (_game.IsCheckmate)
             {
-                var winner = _game.CurrentTurn == PieceColor.White ? "Чёрные" : "Белые";
+                var winner = _game.CurrentTurn == PieceColor.White
+                    ? "Чёрные" : "Белые";
                 return $"МАТ! Победа — {winner}";
             }
             if (_game.IsStalemate) return "ПАТ — Ничья";
             return "Игра окончена";
         }
 
-        // ── click handling ────────────────────────────────────────────────
-        private void BoardCanvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        // ── клики ─────────────────────────────────────────────────────────
+        private void BoardCanvas_MouseLeftButtonDown(object sender,
+                                                     MouseButtonEventArgs e)
         {
             if (_isAnimating || _game.IsGameOver) return;
             if (_mode != GameMode.VsAI && !_isMyTurn) return;
-            if (_mode == GameMode.VsAI && _game.CurrentTurn == PieceColor.Black) return;
+            if (_mode == GameMode.VsAI &&
+                _game.CurrentTurn == PieceColor.Black) return;
 
             var pos = e.GetPosition(BoardCanvas);
             int col = (int)(pos.X / CellSize);
@@ -258,28 +345,29 @@ namespace ChessWPF.Views
         {
             var piece = _game.Board.GetPiece(row, col);
 
-            // if a piece is already selected, try to move
             if (_selRow >= 0)
             {
-                var move = _legalMovesForSelected.Find(m => m.ToRow == row && m.ToCol == col);
+                var move = _legalMovesForSelected.Find(
+                    m => m.ToRow == row && m.ToCol == col);
+
                 if (move != null)
                 {
-                    // pawn promotion check
                     if (move.IsPromotion)
                     {
                         var promo = ShowPromotionDialog(_game.CurrentTurn);
-                        move = new Move(move.FromRow, move.FromCol, move.ToRow, move.ToCol,
-                                        isPromotion: true, promotionPiece: promo);
+                        move = new Move(move.FromRow, move.FromCol,
+                                        move.ToRow, move.ToCol,
+                                        isPromotion: true,
+                                        promotionPiece: promo);
                     }
                     ExecutePlayerMove(move);
                     return;
                 }
-                // deselect
+
                 _selRow = _selCol = -1;
                 _legalMovesForSelected.Clear();
             }
 
-            // select new piece
             if (piece != null && piece.Color == _game.CurrentTurn)
             {
                 _selRow = row;
@@ -313,25 +401,32 @@ namespace ChessWPF.Views
             });
         }
 
-        // ── animation ─────────────────────────────────────────────────────
+        // ── анимация ──────────────────────────────────────────────────────
         private void AnimateMove(Move move, Action onComplete)
         {
             _isAnimating = true;
 
             var piece = _game.Board.GetPiece(move.FromRow, move.FromCol);
-            if (piece == null) { _isAnimating = false; onComplete?.Invoke(); return; }
+            if (piece == null)
+            {
+                _isAnimating = false;
+                onComplete?.Invoke();
+                return;
+            }
 
-            // ghost piece for animation
             var ghost = new TextBlock
             {
                 Text = PieceImages.GetUnicode(piece),
                 FontSize = CellSize * 0.62,
-                Foreground = piece.Color == PieceColor.White ? Brushes.White : Brushes.Black,
+                Foreground = piece.Color == PieceColor.White
+                                   ? Brushes.White : Brushes.Black,
                 IsHitTestVisible = false
             };
+
             if (piece.Color == PieceColor.White)
-                ghost.Effect = new System.Windows.Media.Effects.DropShadowEffect
-                { Color = Colors.Black, ShadowDepth = 1, BlurRadius = 3 };
+                ghost.Effect =
+                    new System.Windows.Media.Effects.DropShadowEffect
+                    { Color = Colors.Black, ShadowDepth = 1, BlurRadius = 3 };
 
             double fromX = move.FromCol * CellSize;
             double fromY = move.FromRow * CellSize + CellSize * 0.05;
@@ -341,30 +436,33 @@ namespace ChessWPF.Views
             Canvas.SetLeft(ghost, fromX);
             Canvas.SetTop(ghost, fromY);
             BoardCanvas.Children.Add(ghost);
-
-            // hide original
             _pieceText[move.FromRow, move.FromCol].Text = "";
 
-            var da = new DoubleAnimation(fromX, toX, new Duration(TimeSpan.FromMilliseconds(200)));
-            var da2 = new DoubleAnimation(fromY, toY, new Duration(TimeSpan.FromMilliseconds(200)));
-            da.Completed += (s, e) =>
+            var dur = new Duration(TimeSpan.FromMilliseconds(180));
+            var daX = new DoubleAnimation(fromX, toX, dur);
+            var daY = new DoubleAnimation(fromY, toY, dur);
+
+            daX.Completed += (s, e2) =>
             {
                 BoardCanvas.Children.Remove(ghost);
                 _isAnimating = false;
                 onComplete?.Invoke();
             };
 
-            ghost.BeginAnimation(Canvas.LeftProperty, da);
-            ghost.BeginAnimation(Canvas.TopProperty, da2);
+            ghost.BeginAnimation(Canvas.LeftProperty, daX);
+            ghost.BeginAnimation(Canvas.TopProperty, daY);
         }
 
-        // ── AI ────────────────────────────────────────────────────────────
+        // ── ИИ ────────────────────────────────────────────────────────────
         private void TriggerAIMove()
         {
             TxtStatus.Text = "ИИ думает...";
+
             System.Threading.Tasks.Task.Run(() =>
             {
-                var aiMove = AIManager.GetBestMove(_game.Board, PieceColor.Black, depth: 3);
+                var aiMove = AIManager.GetBestMove(
+                    _game.Board, PieceColor.Black, depth: _aiDepth);
+
                 Dispatcher.Invoke(() =>
                 {
                     if (aiMove == null || _game.IsGameOver) return;
@@ -377,7 +475,7 @@ namespace ChessWPF.Views
             });
         }
 
-        // ── pawn promotion dialog ─────────────────────────────────────────
+        // ── превращение ───────────────────────────────────────────────────
         private PieceType ShowPromotionDialog(PieceColor color)
         {
             var dlg = new PromotionDialog(color);
@@ -386,12 +484,40 @@ namespace ChessWPF.Views
             return dlg.ChosenPiece;
         }
 
-        // ── game over ─────────────────────────────────────────────────────
+        // ── конец игры ────────────────────────────────────────────────────
         private void HandleGameOver(string message)
         {
             Dispatcher.Invoke(() =>
             {
+                _timer?.Stop();
+
+                if (_mode == GameMode.VsAI)
+                {
+                    if (_game.IsCheckmate)
+                    {
+                        if (_game.CurrentTurn == PieceColor.Black)
+                            PlayerProfile.Instance.RecordWin(wasCheckmate: true);
+                        else
+                            PlayerProfile.Instance.RecordLoss();
+                    }
+                    else if (_game.IsStalemate)
+                    {
+                        PlayerProfile.Instance.RecordDraw(wasStalemate: true);
+                    }
+                    else if (message.Contains("Белые"))
+                    {
+                        PlayerProfile.Instance.RecordWin(wasCheckmate: false);
+                    }
+                    else
+                    {
+                        PlayerProfile.Instance.RecordLoss();
+                    }
+
+                    PlayerProfile.Instance.AddMoves(_game.TotalMoves);
+                }
+
                 TxtStatus.Text = message;
+
                 var dlg = new GameOverDialog(message);
                 dlg.Owner = MainWindow.Instance;
                 if (dlg.ShowDialog() == true)
@@ -406,33 +532,55 @@ namespace ChessWPF.Views
             Dispatcher.Invoke(() => TxtStatus.Text = "⚠ ШАХ!");
         }
 
+        // ── рестарт ───────────────────────────────────────────────────────
         private void RestartGame()
         {
+            _timer?.Stop();
+
+            _whiteSecondsLeft = _timerSeconds;
+            _blackSecondsLeft = _timerSeconds;
+
             _game = new GameManager();
             _game.OnGameOver += HandleGameOver;
             _game.OnCheck += HandleCheck;
+
             _selRow = _selCol = -1;
             _legalMovesForSelected.Clear();
-            _isMyTurn = _mode != GameMode.LanClient;
+            _isAnimating = false;
+
+            switch (_mode)
+            {
+                case GameMode.VsAI: _isMyTurn = true; break;
+                case GameMode.LanHost: _isMyTurn = true; break;
+                case GameMode.LanClient: _isMyTurn = false; break;
+            }
+
+            if (_timerEnabled)
+            {
+                _timer = new DispatcherTimer();
+                _timer.Interval = TimeSpan.FromSeconds(1);
+                _timer.Tick += Timer_Tick;
+                _timer.Start();
+            }
+
             Render();
         }
 
-        // ── network ───────────────────────────────────────────────────────
+        // ── сеть ──────────────────────────────────────────────────────────
         private void StartAsHost()
         {
-            _myColor = PieceColor.White;
             _isMyTurn = true;
             _server = new LANServer();
             _server.OnMoveReceived += OnNetworkMoveReceived;
             _server.OnClientConnected += () =>
-                Dispatcher.Invoke(() => TxtNetInfo.Text = "Клиент подключён ✓");
+                Dispatcher.Invoke(() =>
+                    TxtNetInfo.Text = "Клиент подключён ✓");
             _server.Start();
-            TxtNetInfo.Text = $"Хост • Порт 5555 • Ожидание игрока...";
+            TxtNetInfo.Text = "Хост • Порт 5555 • Ожидание игрока...";
         }
 
         private void StartAsClient()
         {
-            _myColor = PieceColor.Black;
             _isMyTurn = false;
             _client = new LANClient();
             _client.OnMoveReceived += OnNetworkMoveReceived;
@@ -456,16 +604,20 @@ namespace ChessWPF.Views
 
         private void SendNetworkMove(Move move)
         {
-            string data = $"{move.FromRow},{move.FromCol},{move.ToRow},{move.ToCol}," +
-                          $"{move.IsPromotion},{(int)move.PromotionPiece}," +
-                          $"{move.IsEnPassant},{move.IsCastling}";
+            string data =
+                $"{move.FromRow},{move.FromCol}," +
+                $"{move.ToRow},{move.ToCol}," +
+                $"{move.IsPromotion},{(int)move.PromotionPiece}," +
+                $"{move.IsEnPassant},{move.IsCastling}";
+
             if (_mode == GameMode.LanHost) _server?.SendMove(data);
             else if (_mode == GameMode.LanClient) _client?.SendMove(data);
         }
 
-        // ── button handlers ───────────────────────────────────────────────
+        // ── кнопки ────────────────────────────────────────────────────────
         private void BtnMenu_Click(object sender, RoutedEventArgs e)
         {
+            _timer?.Stop();
             _server?.Stop();
             _client?.Disconnect();
             MainWindow.Instance.NavigateToMainMenu();

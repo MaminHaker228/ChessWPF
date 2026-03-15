@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChessWPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6f840b1b8342f1d5bedde2e52de6cca60bee7b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChessWPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChessWPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

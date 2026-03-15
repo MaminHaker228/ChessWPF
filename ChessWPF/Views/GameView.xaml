@@ -2,123 +2,197 @@
 <Page x:Class="ChessWPF.Views.GameView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      Background="#1A1A2E"
-      Title="Игра">
+      Background="#1A1A2E">
+
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="220"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Rank labels left -->
-        <ItemsControl x:Name="RankLabels"
-                      Grid.Column="0"
-                      VerticalAlignment="Center"
-                      Margin="8,0,4,0">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Vertical"/>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-        </ItemsControl>
-
-        <!-- Chess Board area -->
-        <Grid Grid.Column="1"
-              VerticalAlignment="Center"
-              HorizontalAlignment="Center">
+        <!-- Левая часть: доска -->
+        <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <ItemsControl x:Name="FileLabels"
-                          Grid.Row="0"
-                          HorizontalAlignment="Center"/>
-            <Canvas x:Name="BoardCanvas"
-                    Grid.Row="1"
-                    Width="560" Height="560"
-                    MouseLeftButtonDown="BoardCanvas_MouseLeftButtonDown"
-                    ClipToBounds="True"/>
+
+            <!-- Таймер чёрных -->
+            <Border Grid.Row="0" Background="#16213E" CornerRadius="8"
+                    Padding="14,8" Margin="24,0,0,6">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="&#x265A; Чёрные"
+                               Foreground="#EAEAEA" FontFamily="Segoe UI"
+                               FontSize="14" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="TxtTimerBlack" Grid.Column="1"
+                               Text="" Foreground="#EAEAEA"
+                               FontFamily="Consolas" FontSize="28"
+                               FontWeight="Bold"/>
+                </Grid>
+            </Border>
+
+            <!-- Доска + буквы -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="24"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Цифры рангов -->
+                <ItemsControl x:Name="RankLabels" Grid.Column="0" Grid.Row="0"
+                              VerticalAlignment="Top"/>
+
+                <!-- Сама доска -->
+                <Canvas x:Name="BoardCanvas"
+                        Grid.Column="1" Grid.Row="0"
+                        Width="560" Height="560"
+                        MouseLeftButtonDown="BoardCanvas_MouseLeftButtonDown"/>
+
+                <!-- Буквы файлов -->
+                <ItemsControl x:Name="FileLabels"
+                              Grid.Column="1" Grid.Row="1"
+                              Margin="0,2,0,0"/>
+            </Grid>
+
+            <!-- Таймер белых -->
+            <Border Grid.Row="2" Background="#16213E" CornerRadius="8"
+                    Padding="14,8" Margin="24,6,0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="&#x2654; Белые"
+                               Foreground="#EAEAEA" FontFamily="Segoe UI"
+                               FontSize="14" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="TxtTimerWhite" Grid.Column="1"
+                               Text="" Foreground="#EAEAEA"
+                               FontFamily="Consolas" FontSize="28"
+                               FontWeight="Bold"/>
+                </Grid>
+            </Border>
+
         </Grid>
 
-        <!-- Right panel -->
-        <Border Grid.Column="2"
-                Background="#16213E"
-                CornerRadius="10"
-                Margin="8"
-                Padding="12">
-            <StackPanel>
+        <!-- Правая панель -->
+        <StackPanel Grid.Column="1" Margin="8,16,16,16">
+
+            <!-- Статус -->
+            <Border Background="#16213E" CornerRadius="8" Padding="12" Margin="0,0,0,8">
                 <TextBlock x:Name="TxtStatus"
-                           Text="Ваш ход"
-                           FontSize="18"
-                           FontWeight="Bold"
+                           Text="Ваш ход (Белые)"
                            Foreground="#E94560"
                            FontFamily="Segoe UI"
+                           FontSize="15"
+                           FontWeight="Bold"
                            TextWrapping="Wrap"
-                           Margin="0,0,0,12"
                            HorizontalAlignment="Center"/>
-                <Separator Background="#2A2A4A" Margin="0,0,0,12"/>
+            </Border>
 
-                <TextBlock Text="Захвачено (чёрные):"
-                           Foreground="#A0A0B0"
-                           FontSize="11"
-                           FontFamily="Segoe UI"
-                           Margin="0,0,0,4"/>
-                <TextBlock x:Name="TxtCapturedBlack"
+            <!-- Инфо сети / режима -->
+            <Border Background="#16213E" CornerRadius="8" Padding="10" Margin="0,0,0,8">
+                <TextBlock x:Name="TxtNetInfo"
                            Text=""
-                           Foreground="#EAEAEA"
-                           FontSize="16"
-                           TextWrapping="Wrap"
-                           Margin="0,0,0,12"/>
-
-                <TextBlock Text="Захвачено (белые):"
                            Foreground="#A0A0B0"
-                           FontSize="11"
                            FontFamily="Segoe UI"
-                           Margin="0,0,0,4"/>
-                <TextBlock x:Name="TxtCapturedWhite"
-                           Text=""
-                           Foreground="#EAEAEA"
-                           FontSize="16"
-                           TextWrapping="Wrap"
-                           Margin="0,0,0,20"/>
-
-                <Separator Background="#2A2A4A" Margin="0,0,0,12"/>
-
-                <TextBlock Text="История ходов:"
-                           Foreground="#A0A0B0"
                            FontSize="11"
-                           FontFamily="Segoe UI"
-                           Margin="0,0,0,4"/>
-                <ScrollViewer Height="220"
-                              VerticalScrollBarVisibility="Auto">
+                           TextWrapping="Wrap"/>
+            </Border>
+
+            <!-- Захваченные фигуры чёрных -->
+            <Border Background="#16213E" CornerRadius="8" Padding="10" Margin="0,0,0,8">
+                <StackPanel>
+                    <TextBlock Text="Взяты у чёрных:"
+                               Foreground="#A0A0B0" FontSize="11"
+                               FontFamily="Segoe UI" Margin="0,0,0,4"/>
+                    <TextBlock x:Name="TxtCapturedBlack"
+                               Foreground="#EAEAEA" FontSize="18"
+                               TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Захваченные фигуры белых -->
+            <Border Background="#16213E" CornerRadius="8" Padding="10" Margin="0,0,0,8">
+                <StackPanel>
+                    <TextBlock Text="Взяты у белых:"
+                               Foreground="#A0A0B0" FontSize="11"
+                               FontFamily="Segoe UI" Margin="0,0,0,4"/>
+                    <TextBlock x:Name="TxtCapturedWhite"
+                               Foreground="#EAEAEA" FontSize="18"
+                               TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+
+            <!-- История ходов -->
+            <Border Background="#16213E" CornerRadius="8" Padding="10"
+                    Margin="0,0,0,8" Height="200">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <TextBlock x:Name="TxtMoveHistory"
                                Foreground="#EAEAEA"
                                FontFamily="Consolas"
                                FontSize="12"
                                TextWrapping="Wrap"/>
                 </ScrollViewer>
+            </Border>
 
-                <Separator Background="#2A2A4A" Margin="0,12"/>
+            <!-- Кнопки -->
+            <Button x:Name="BtnNewGame"
+                    Click="BtnNewGame_Click"
+                    Height="42" Margin="0,0,0,6"
+                    Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="bd" Background="#E94560" CornerRadius="8">
+                            <TextBlock FontSize="14" FontWeight="Bold"
+                                       Foreground="White" FontFamily="Segoe UI"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center">
+                                <TextBlock.Text>Новая игра</TextBlock.Text>
+                            </TextBlock>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#C73652"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
 
-                <TextBlock x:Name="TxtNetInfo"
-                           Text=""
-                           Foreground="#A0A0B0"
-                           FontSize="11"
-                           TextWrapping="Wrap"
-                           Margin="0,0,0,12"/>
+            <Button x:Name="BtnMenu"
+                    Click="BtnMenu_Click"
+                    Height="42"
+                    Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="bd" Background="#2A2A4A" CornerRadius="8"
+                                BorderThickness="1" BorderBrush="#4A4A7A">
+                            <TextBlock FontSize="14" Foreground="#EAEAEA"
+                                       FontFamily="Segoe UI"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center">
+                                <TextBlock.Text>Главное меню</TextBlock.Text>
+                            </TextBlock>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#3A3A6A"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
 
-                <Button Content="&#x2190; Главное меню"
-                        Style="{StaticResource SecondaryButtonStyle}"
-                        Click="BtnMenu_Click"
-                        Height="36"
-                        Margin="0,4"/>
-                <Button Content="Новая игра"
-                        Style="{StaticResource SecondaryButtonStyle}"
-                        Click="BtnNewGame_Click"
-                        Height="36"
-                        Margin="0,4"/>
-            </StackPanel>
-        </Border>
+        </StackPanel>
     </Grid>
 </Page>

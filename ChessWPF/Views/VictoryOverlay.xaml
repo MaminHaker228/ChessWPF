@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="ChessWPF.Views.VictoryOverlay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        Width="600" Height="400"
+        WindowStartupLocation="CenterOwner">
+    <Canvas x:Name="ConfettiCanvas">
+        <!-- Конфетти рисуется в коде -->
+        <Border HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Canvas.Left="150" Canvas.Top="140"
+                Background="#CC1A1A2E" CornerRadius="16"
+                Padding="40,24">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock x:Name="TxtWinner"
+                           FontSize="32" FontWeight="Bold"
+                           Foreground="#EAEAEA"
+                           FontFamily="Segoe UI"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,8"/>
+                <TextBlock Text="🏆" FontSize="48"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,16"/>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <Button x:Name="BtnPlayAgain"
+                            Click="BtnPlayAgain_Click"
+                            Height="40" Width="140"
+                            Margin="0,0,8,0" Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="bd" Background="#E94560"
+                                        CornerRadius="8">
+                                    <TextBlock FontSize="14" FontWeight="Bold"
+                                               Foreground="White"
+                                               FontFamily="Segoe UI"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center">
+                                        <TextBlock.Text>Ещё раз!</TextBlock.Text>
+                                    </TextBlock>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="bd" Property="Background" Value="#C73652"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button x:Name="BtnMenu"
+                            Click="BtnMenu_Click"
+                            Height="40" Width="140"
+                            Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="bd" Background="#2A2A4A"
+                                        CornerRadius="8">
+                                    <TextBlock FontSize="14"
+                                               Foreground="#EAEAEA"
+                                               FontFamily="Segoe UI"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center">
+                                        <TextBlock.Text>В меню</TextBlock.Text>
+                                    </TextBlock>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="bd" Property="Background" Value="#3A3A6A"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Canvas>
+</Window>

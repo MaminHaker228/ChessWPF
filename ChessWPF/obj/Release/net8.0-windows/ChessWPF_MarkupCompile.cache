@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\eliza\OneDrive\Рабочий стол\ChessWPF\ChessWPF\App.xaml
-6714712774
+13-1220455439
 
-20-11085365
+31-1974161961
 198185795992
-MainWindow.xaml;Views\GameOverDialog.xaml;Views\GameView.xaml;Views\LanSetupDialog.xaml;Views\MainMenuView.xaml;Views\PromotionDialog.xaml;
+MainWindow.xaml;Views\AnalysisView.xaml;Views\DifficultyDialog.xaml;Views\GameOverDialog.xaml;Views\GameView.xaml;Views\HistoryView.xaml;Views\LanSetupDialog.xaml;Views\MainMenuView.xaml;Views\ProfileView.xaml;Views\PromotionDialog.xaml;Views\PuzzleView.xaml;Views\TimeDialog.xaml;Views\VictoryOverlay.xaml;
 
 False
 

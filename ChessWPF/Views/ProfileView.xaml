@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page x:Class="ChessWPF.Views.ProfileView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Background="#1A1A2E">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel MaxWidth="620"
+                    HorizontalAlignment="Center"
+                    Margin="30,30,30,30">
+
+            <!-- Заголовок -->
+            <TextBlock FontSize="28" FontWeight="Bold"
+                       FontFamily="Segoe UI" Foreground="#EAEAEA"
+                       HorizontalAlignment="Center" Margin="0,0,0,24">
+                <TextBlock.Text>Личный кабинет</TextBlock.Text>
+            </TextBlock>
+
+            <!-- Аватар + ник + звание -->
+            <Border Background="#16213E" CornerRadius="12"
+                    Padding="24" Margin="0,0,0,16">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Аватар (кликабельный) -->
+                    <Grid Grid.Column="0" Margin="0,0,20,0">
+                        <Border Width="90" Height="90" CornerRadius="45"
+                                Background="#2A2A4A" Cursor="Hand"
+                                MouseLeftButtonDown="ChangeAvatar_Click">
+                            <!-- Если нет аватарки — иконка -->
+                            <TextBlock x:Name="TxtAvatarIcon"
+                                       Text="♟" FontSize="44"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Foreground="#E94560"/>
+                        </Border>
+                        <!-- Если есть аватарка — картинка поверх -->
+                        <Border Width="90" Height="90" CornerRadius="45">
+                            <Border.Clip>
+                                <EllipseGeometry Center="45,45" RadiusX="45" RadiusY="45"/>
+                            </Border.Clip>
+                            <Image x:Name="ImgAvatar"
+                                   Stretch="UniformToFill"
+                                   Visibility="Collapsed"/>
+                        </Border>
+                        <!-- Кнопка смены -->
+                        <Border Background="#E94560" CornerRadius="10"
+                                Width="20" Height="20"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                Cursor="Hand"
+                                MouseLeftButtonDown="ChangeAvatar_Click">
+                            <TextBlock Text="+" FontSize="14"
+                                       Foreground="White" FontWeight="Bold"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                        </Border>
+                    </Grid>
+
+                    <!-- Ник и звание -->
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+                            <TextBlock x:Name="TxtNickname"
+                                       FontSize="22" FontWeight="Bold"
+                                       FontFamily="Segoe UI" Foreground="#EAEAEA"
+                                       VerticalAlignment="Center"/>
+                            <Border Background="#2A2A4A" CornerRadius="4"
+                                    Padding="6,2" Margin="8,0,0,0"
+                                    Cursor="Hand"
+                                    MouseLeftButtonDown="EditNickname_Click">
+                                <TextBlock Text="✏ Изменить"
+                                           Foreground="#A0A0B0"
+                                           FontFamily="Segoe UI" FontSize="11"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
+                            <TextBlock x:Name="TxtRankIcon"
+                                       FontSize="16" Margin="0,0,6,0"/>
+                            <TextBlock x:Name="TxtRank"
+                                       FontSize="14" Foreground="#E94560"
+                                       FontFamily="Segoe UI" FontWeight="Bold"/>
+                        </StackPanel>
+
+                        <TextBlock x:Name="TxtRegistered"
+                                   FontSize="11" Foreground="#A0A0B0"
+                                   FontFamily="Segoe UI"/>
+
+                        <!-- Текущая серия -->
+                        <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                            <TextBlock Text="🔥 Серия: "
+                                       FontSize="12" Foreground="#F39C12"
+                                       FontFamily="Segoe UI"/>
+                            <TextBlock x:Name="TxtCurrentStreak"
+                                       FontSize="12" FontWeight="Bold"
+                                       Foreground="#F39C12"
+                                       FontFamily="Segoe UI"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Поле редактирования ника -->
+            <Border x:Name="EditPanel" Background="#16213E"
+                    CornerRadius="8" Padding="16"
+                    Margin="0,0,0,16" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock Foreground="#A0A0B0" FontSize="13"
+                               FontFamily="Segoe UI" Margin="0,0,0,8">
+                        <TextBlock.Text>Новый никнейм:</TextBlock.Text>
+                    </TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="TxtNewNick" Grid.Column="0"
+                                 Background="#2A2A4A" Foreground="#EAEAEA"
+                                 BorderBrush="#4A4A7A" FontSize="15"
+                                 Padding="10,6" FontFamily="Segoe UI"
+                                 MaxLength="20" Margin="0,0,8,0"/>
+                        <Button Grid.Column="1" Click="SaveNickname_Click"
+                                Height="36" Width="100" Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="bd" Background="#E94560" CornerRadius="6">
+                                        <TextBlock FontSize="13" Foreground="White"
+                                                   FontFamily="Segoe UI"
+                                                   HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center">
+                                            <TextBlock.Text>Сохранить</TextBlock.Text>
+                                        </TextBlock>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="bd" Property="Background" Value="#C73652"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- Главные цифры -->
+            <Grid Margin="0,0,0,16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" Background="#16213E"
+                        CornerRadius="10" Padding="16" Margin="0,0,6,0">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="🏆" FontSize="28"
+                                   HorizontalAlignment="Center" Margin="0,0,0,4"/>
+                        <TextBlock x:Name="TxtWins" FontSize="26"
+                                   FontWeight="Bold" Foreground="#27AE60"
+                                   FontFamily="Segoe UI"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Foreground="#A0A0B0" FontSize="12"
+                                   FontFamily="Segoe UI"
+                                   HorizontalAlignment="Center">
+                            <TextBlock.Text>Победы</TextBlock.Text>
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="1" Background="#16213E"
+                        CornerRadius="10" Padding="16" Margin="6,0,6,0">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="💀" FontSize="28"
+                                   HorizontalAlignment="Center" Margin="0,0,0,4"/>
+                        <TextBlock x:Name="TxtLosses" FontSize="26"
+                                   FontWeight="Bold" Foreground="#E94560"
+                                   FontFamily="Segoe UI"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Foreground="#A0A0B0" FontSize="12"
+                                   FontFamily="Segoe UI"
+                                   HorizontalAlignment="Center">
+                            <TextBlock.Text>Поражения</TextBlock.Text>
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="2" Background="#16213E"
+                        CornerRadius="10" Padding="16" Margin="6,0,0,0">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="🤝" FontSize="28"
+                                   HorizontalAlignment="Center" Margin="0,0,0,4"/>
+                        <TextBlock x:Name="TxtDraws" FontSize="26"
+                                   FontWeight="Bold" Foreground="#F39C12"
+                                   FontFamily="Segoe UI"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Foreground="#A0A0B0" FontSize="12"
+                                   FontFamily="Segoe UI"
+                                   HorizontalAlignment="Center">
+                            <TextBlock.Text>Ничьи</TextBlock.Text>
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <!-- Детальная статистика -->
+            <Border Background="#16213E" CornerRadius="12"
+                    Padding="20" Margin="0,0,0,16">
+                <StackPanel>
+                    <TextBlock FontSize="16" FontWeight="Bold"
+                               FontFamily="Segoe UI" Foreground="#EAEAEA"
+                               Margin="0,0,0,14">
+                        <TextBlock.Text>Подробная статистика</TextBlock.Text>
+                    </TextBlock>
+
+                    <!-- Винрейт -->
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Foreground="#A0A0B0" FontSize="13"
+                                       FontFamily="Segoe UI">
+                                <TextBlock.Text>Процент побед</TextBlock.Text>
+                            </TextBlock>
+                            <Border Background="#2A2A4A" CornerRadius="4"
+                                    Height="8" Margin="0,6,0,0">
+                                <Border x:Name="WinRateBar" Background="#27AE60"
+                                        CornerRadius="4"
+                                        HorizontalAlignment="Left"
+                                        Height="8" Width="0"/>
+                            </Border>
+                        </StackPanel>
+                        <TextBlock x:Name="TxtWinRate" Grid.Column="1"
+                                   FontSize="18" FontWeight="Bold"
+                                   Foreground="#27AE60" FontFamily="Segoe UI"
+                                   VerticalAlignment="Center" Margin="16,0,0,0"/>
+                    </Grid>
+
+                    <Separator Background="#2A2A4A" Margin="0,4,0,12"/>
+
+                    <!-- Матов -->
+                    <Grid Margin="0,0,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" Grid.Column="0">
+                            <TextBlock Text="♟" Foreground="#E94560"
+                                       FontSize="16" Margin="0,0,8,0"
+                                       VerticalAlignment="Center"/>
+                            <TextBlock Foreground="#EAEAEA" FontSize="14"
+                                       FontFamily="Segoe UI" VerticalAlignment="Center">
+                                <TextBlock.Text>Поставлено матов</TextBlock.Text>
+                            </TextBlock>
+                        </StackPanel>
+                        <TextBlock x:Name="TxtCheckmates" Grid.Column="1"
+                                   FontSize="16" FontWeight="Bold"
+                                   Foreground="#EAEAEA" FontFamily="Segoe UI"/>
+                    </Grid>
+
+                    <!-- Патов -->
+                    <Grid Margin="0,0,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" Grid.Column="0">
+                            <TextBlock Text="🤷" FontSize="16"
+                                       Margin="0,0,8,0" VerticalAlignment="Center"/>
+                            <TextBlock Foreground="#EAEAEA" FontSize="14"
+                                       FontFamily="Segoe UI" VerticalAlignment="Center">
+                                <TextBlock.Text>Патов сыграно</TextBlock.Text>
+                            </TextBlock>
+                        </StackPanel>
+                        <TextBlock x:Name="TxtStalemates" Grid.Column="1"
+                                   FontSize="16" FontWeight="Bold"
+                                   Foreground="#EAEAEA" FontFamily="Segoe UI"/>
+                    </Grid>
+
+                    <!-- Всего партий -->
+                    <Grid Margin="0,0,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" Grid.Column="0">
+                            <TextBlock Text="🎮" FontSize="16"
+                                       Margin="0,0,8,0" VerticalAlignment="Center"/>
+                            <TextBlock Foreground="#EAEAEA" FontSize="14"
+                                       FontFamily="Segoe UI" VerticalAlignment="Center">
+                                <TextBlock.Text>Всего партий</TextBlock.Text>
+                            </TextBlock>
+                        </StackPanel>
+                        <TextBlock x:Name="TxtGamesPlayed" Grid.Column="1"
+                                   FontSize="16" FontWeight="Bold"
+                                   Foreground="#EAEAEA" FontFamily="Segoe UI"/>
+                    </Grid>
+
+                    <!-- Ходов сделано -->
+                    <Grid Margin="0,0,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" Grid.Column="0">
+                            <TextBlock Text="👣" FontSize="16"
+                                       Margin="0,0,8,0" VerticalAlignment="Center"/>
+                            <TextBlock Foreground="#EAEAEA" FontSize="14"
+                                       FontFamily="Segoe UI" VerticalAlignment="Center">
+                                <TextBlock.Text>Всего ходов сделано</TextBlock.Text>
+                            </TextBlock>
+                        </StackPanel>
+                        <TextBlock x:Name="TxtTotalMoves" Grid.Column="1"
+                                   FontSize="16" FontWeight="Bold"
+                                   Foreground="#EAEAEA" FontFamily="Segoe UI"/>
+                    </Grid>
+
+                    <!-- Лучшая серия -->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" Grid.Column="0">
+                            <TextBlock Text="🔥" FontSize="16"
+                                       Margin="0,0,8,0" VerticalAlignment="Center"/>
+                            <TextBlock Foreground="#EAEAEA" FontSize="14"
+                                       FontFamily="Segoe UI" VerticalAlignment="Center">
+                                <TextBlock.Text>Лучшая серия побед</TextBlock.Text>
+                            </TextBlock>
+                        </StackPanel>
+                        <TextBlock x:Name="TxtBestStreak" Grid.Column="1"
+                                   FontSize="16" FontWeight="Bold"
+                                   Foreground="#F39C12" FontFamily="Segoe UI"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- Скин доски -->
+            <Border Background="#16213E" CornerRadius="12"
+                    Padding="20" Margin="0,0,0,16">
+                <StackPanel>
+                    <TextBlock FontSize="16" FontWeight="Bold"
+                               FontFamily="Segoe UI" Foreground="#EAEAEA"
+                               Margin="0,0,0,14">
+                        <TextBlock.Text>🎨 Скин доски</TextBlock.Text>
+                    </TextBlock>
+
+                    <!-- Превью доски -->
+                    <Canvas x:Name="BoardPreview"
+                            Width="160" Height="160"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,16"/>
+
+                    <!-- Кнопки скинов -->
+                    <WrapPanel HorizontalAlignment="Center"
+                               x:Name="SkinButtons"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Скин фигур -->
+            <Border Background="#16213E" CornerRadius="12"
+                    Padding="20" Margin="0,0,0,16">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal"
+                                Grid.Column="0" VerticalAlignment="Center">
+                        <TextBlock Text="♟" FontSize="16"
+                                   Foreground="#E94560"
+                                   Margin="0,0,8,0" VerticalAlignment="Center"/>
+                        <StackPanel>
+                            <TextBlock Foreground="#EAEAEA" FontSize="14"
+                                       FontFamily="Segoe UI" FontWeight="Bold">
+                                <TextBlock.Text>Скин фигур</TextBlock.Text>
+                            </TextBlock>
+                            <TextBlock Foreground="#A0A0B0" FontSize="11"
+                                       FontFamily="Segoe UI">
+                                <TextBlock.Text>Будет доступно в следующей версии</TextBlock.Text>
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                    <Border Grid.Column="1" Background="#2A2A4A"
+                            CornerRadius="6" Padding="12,8">
+                        <TextBlock Foreground="#A0A0B0" FontSize="12"
+                                   FontFamily="Segoe UI">
+                            <TextBlock.Text>Скоро...</TextBlock.Text>
+                        </TextBlock>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!-- Сброс статистики -->
+            <Border Background="#16213E" CornerRadius="12"
+                    Padding="20" Margin="0,0,0,16">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                        <TextBlock Foreground="#EAEAEA" FontSize="14"
+                                   FontFamily="Segoe UI" FontWeight="Bold">
+                            <TextBlock.Text>Сбросить статистику</TextBlock.Text>
+                        </TextBlock>
+                        <TextBlock Foreground="#A0A0B0" FontSize="11"
+                                   FontFamily="Segoe UI">
+                            <TextBlock.Text>Все данные будут удалены безвозвратно</TextBlock.Text>
+                        </TextBlock>
+                    </StackPanel>
+                    <Button Grid.Column="1" Click="BtnReset_Click"
+                            Height="36" Width="100" Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="bd" Background="#2A2A4A"
+                                        CornerRadius="6" BorderThickness="1"
+                                        BorderBrush="#E94560">
+                                    <TextBlock FontSize="13" Foreground="#E94560"
+                                               FontFamily="Segoe UI"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center">
+                                        <TextBlock.Text>Сбросить</TextBlock.Text>
+                                    </TextBlock>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="bd" Property="Background" Value="#3A1A2A"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </Border>
+
+            <!-- Назад -->
+            <Button Click="BtnBack_Click" Height="46" Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="bd" Background="#E94560" CornerRadius="8">
+                            <TextBlock FontSize="15" FontWeight="Bold"
+                                       Foreground="White" FontFamily="Segoe UI"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center">
+                                <TextBlock.Text>← Главное меню</TextBlock.Text>
+                            </TextBlock>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#C73652"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

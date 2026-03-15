@@ -64,6 +64,51 @@ namespace ChessWPF.Models
             return b;
         }
 
+        public void LoadFEN(string fen)
+        {
+            // Очищаем доску
+            for (int r = 0; r < 8; r++)
+                for (int c = 0; c < 8; c++)
+                    SetPiece(r, c, null);
+
+            string[] parts = fen.Split(' ');
+            string[] rows = parts[0].Split('/');
+
+            for (int r = 0; r < 8; r++)
+            {
+                int col = 0;
+                foreach (char ch in rows[r])
+                {
+                    if (char.IsDigit(ch))
+                    {
+                        col += ch - '0';
+                    }
+                    else
+                    {
+                        var color = char.IsUpper(ch)
+                            ? PieceColor.White
+                            : PieceColor.Black;
+
+                        var type = char.ToLower(ch) switch
+                        {
+                            'p' => PieceType.Pawn,
+                            'n' => PieceType.Knight,
+                            'b' => PieceType.Bishop,
+                            'r' => PieceType.Rook,
+                            'q' => PieceType.Queen,
+                            'k' => PieceType.King,
+                            _ => PieceType.Pawn
+                        };
+
+                        SetPiece(r, col, new Piece(type, color));
+                        col++;
+                    }
+                }
+            }
+        }
+
+
+
         // ?? find king ?????????????????????????????????????????????????????
         public (int row, int col) FindKing(PieceColor color)
         {

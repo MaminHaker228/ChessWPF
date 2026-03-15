@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0w4m7DbJMy8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\eliza\\OneDrive\\Рабочий стол\\ChessWPF\\ChessWPF\\ChessWPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\eliza\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.25\\microsoft.net.illink.tasks.8.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

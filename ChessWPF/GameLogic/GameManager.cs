@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using ChessWPF.Models;
@@ -14,6 +14,7 @@ namespace ChessWPF.GameLogic
         public bool IsCheckmate { get; private set; }
         public bool IsStalemate { get; private set; }
         public Move LastMove { get; private set; }
+        public int TotalMoves { get; private set; } = 0; // ← добавлено
 
         public List<Piece> CapturedByWhite { get; } = new();
         public List<Piece> CapturedByBlack { get; } = new();
@@ -40,21 +41,24 @@ namespace ChessWPF.GameLogic
         {
             if (IsGameOver) return;
 
-            // Record capture
+            // Записываем взятие
             var captured = Board.GetPiece(move.ToRow, move.ToCol);
             if (move.IsEnPassant)
             {
-                int captRow = CurrentTurn == PieceColor.White ? move.ToRow + 1 : move.ToRow - 1;
+                int captRow = CurrentTurn == PieceColor.White
+                    ? move.ToRow + 1
+                    : move.ToRow - 1;
                 captured = Board.GetPiece(captRow, move.ToCol);
             }
             if (captured != null)
             {
-                if (CurrentTurn == PieceColor.White) CapturedByWhite.Add(captured.Clone());
-                else CapturedByBlack.Add(captured.Clone());
+                if (CurrentTurn == PieceColor.White)
+                    CapturedByWhite.Add(captured.Clone());
+                else
+                    CapturedByBlack.Add(captured.Clone());
             }
 
-            // Record history
-            var piece = Board.GetPiece(move.FromRow, move.FromCol);
+            // Записываем историю
             if (CurrentTurn == PieceColor.White)
                 _historyBuilder.Append($"{_moveNumber}. {move.ToAlgebraic()} ");
             else
@@ -63,25 +67,30 @@ namespace ChessWPF.GameLogic
                 _moveNumber++;
             }
 
-            // Apply
+            // Применяем ход
             Board.ApplyMoveLowLevel(move);
             LastMove = move;
-            CurrentTurn = CurrentTurn == PieceColor.White ? PieceColor.Black : PieceColor.White;
+            TotalMoves++;  // ← считаем ход
+            CurrentTurn = CurrentTurn == PieceColor.White
+                ? PieceColor.Black
+                : PieceColor.White;
 
-            // Check game state
+            // Проверяем состояние игры
             IsCheck = MoveValidator.IsInCheck(Board, CurrentTurn);
+
             if (MoveValidator.IsCheckmate(Board, CurrentTurn))
             {
                 IsGameOver = true;
                 IsCheckmate = true;
-                string winner = CurrentTurn == PieceColor.White ? "׸����" : "�����";
-                OnGameOver?.Invoke($"���! ������ � {winner}");
+                string winner = CurrentTurn == PieceColor.White
+                    ? "Чёрные" : "Белые";
+                OnGameOver?.Invoke($"МАТ! Победа — {winner}");
             }
             else if (MoveValidator.IsStalemate(Board, CurrentTurn))
             {
                 IsGameOver = true;
                 IsStalemate = true;
-                OnGameOver?.Invoke("��� � �����");
+                OnGameOver?.Invoke("ПАТ — Ничья");
             }
             else if (IsCheck)
             {
